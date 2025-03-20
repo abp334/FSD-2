@@ -1,0 +1,22 @@
+<!-- display addition of two numbers on browser using callback function -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      function mydisplay(sum) {
+        document.getElementById("demo").innerHTML = "<b>" + sum + "<b>";
+      }
+      function mycal(num1, num2, mycallback) {
+        sum = num1 + num2;
+        mycallback(sum);
+      }
+      mycal(13, 15, mydisplay);
+    </script>
+  </body>
+</html>
