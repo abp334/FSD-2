@@ -1,0 +1,26 @@
+<!-- write a code to increase the font size at interval of 1000ms and it should stop increasing when the font size reach to 50px -->
+<!-- This task should be perform when you click increase button on browser
+ default size is 15px -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1" style="font-size: 15px">HELLO WORLD</div>
+    <button id="btn1" onclick="change()">Click Me</button>
+    <script>
+      function change() {
+        let defaultSize = 15;
+        setInterval(() => {
+          if (defaultSize < 50) {
+            document.getElementById("div1").style.fontSize = defaultSize + "px";
+            defaultSize++;
+          }
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
