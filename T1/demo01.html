@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="change()">Click Me</button>
+    <script>
+      function change() {
+        let a = 2;
+        let b = 5;
+        setInterval(() => {
+          if (a + b < 20) {
+            document.writeln(a + b);
+            a++;
+            b++;
+          }
+        }, 1000);
+        setTimeout(() => {
+          document.writeln("STOPPED");
+        }, 9000);
+      }
+    </script>
+  </body>
+</html>
